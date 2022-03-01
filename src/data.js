@@ -1,5 +1,5 @@
 import { findAllPokemons } from "./data/pokemon/pokemon.repo.js";
-
+//*******************FUNCION DE ORDENAMIENTO 1-251 */
 export function order1_251() {
   const allPokemons = findAllPokemons();
   const finalUp = allPokemons.sort(function (a, b) {
@@ -7,7 +7,7 @@ export function order1_251() {
   });
   return finalUp;
 }
-
+//*******************FUNCION DE ORDENAMIENTO 251-1 
 export function order251_1() {
   const allPokemons = findAllPokemons();
   const finalDown = allPokemons.sort(function (a, b) {
@@ -15,7 +15,7 @@ export function order251_1() {
   });
   return finalDown;
 }
-
+//*******************FUNCION DE ORDENAMIENTO A-Z */
 export function orderByAz() {
   const allPokemons = findAllPokemons();
   const finalOrderAZ = allPokemons.sort((a, b) => {
@@ -23,18 +23,11 @@ export function orderByAz() {
     b = b.name;
     return a.localeCompare(b);
   });
-  /*{if (a.name == b.name) {
-      return 0;
-    }
-    if (a.name < b.name) {
-      return -1;
-    }
-  }*/
 
   console.log(finalOrderAZ);
   return finalOrderAZ;
 }
-
+//*******************FUNCION DE ORDENAMIENTO Z-A */
 export function orderByZa() {
   const allPokemons = findAllPokemons();
   const finalOrderZA = allPokemons.sort((a, b) => {
@@ -42,23 +35,16 @@ export function orderByZa() {
     b = b.name;
     return a.localeCompare(b);
   });
-  /*(a, b) => {
-    if (a.name < b.name) {
-      return 1;
-    } else if (a.name > b.name) {
-      return -1;
-    }
-  });*/
   console.log(finalOrderZA);
   return finalOrderZA.reverse();
 }
-
+//*******************FUNCION DE FILTRADO POR TIPOS */
 export function filterByTypes(type) {
   const pokemones = findAllPokemons();
   const filtrado = pokemones.filter((pokemon) => pokemon.type.includes(type));
   return filtrado;
 }
-
+//*******************FUNCION DE POKEMONES LEGENDARIOS */
 export function filterByLegendary(legendary) {
   const pokemones = findAllPokemons();
   legendary = "legendary";
@@ -67,7 +53,7 @@ export function filterByLegendary(legendary) {
   );
   return legendarios;
 }
-
+//*******************FUNCION DE BUSQUEDA POR NOMBRE */
 export function searchPokemon(word) {
   const pokemones = findAllPokemons();
   let finalSearch = pokemones.filter((item) => item.name.includes(word));
