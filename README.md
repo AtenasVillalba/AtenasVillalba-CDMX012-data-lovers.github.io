@@ -444,6 +444,15 @@ en base a los resultados, deberás iterar tus diseños. Cuéntanos
 qué problemas de usabilidad detectaste a través de los _tests_ y cómo los
 mejoraste en tu propuesta final.
 
+
+PROBLEMAS ENCONTRADOS:
+
+-En nuestra función de ordenado de A-Z y Z-A, no era posible el testeo completo de lineas del codigo, lo cual hacía que nuestra branch disminuyera un 50%, causando inestabilidad en el código, entonces, la solución para el problema de testeo fue reescribir la estructura modificando la parte no testeable por algo que si lo fuera y nos permitiera saber el funcionamiento optimo para el proyecto 
+
+-Al momento de testear las primeras funciones nos dimos cuenta que su formato en el que estaban escritas no era testeable debido a que estabamos accediendo a la data directamente, por lo cual, hicimos modificaciones para el acceso 
+
+-Para mejorar el funcionamiento de respuesta a cada funcion redujimos dentro de una variable un objeto con unicamente 3 datos a testear para compararlo en los test en lugar de acceder a toda la data, esto gracias a los Mocks y a la creación de nuevos files.
+
 ### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
 Luego de diseñar tu interfaz de usuario deberás trabajar en su implementación.

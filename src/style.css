@@ -100,7 +100,6 @@ input {
 }
 
 .welcomePage {
-  /*background-image: url(https://a-static.besthdwallpaper.com/pokemon-go-video-game-papel-pintado-1024x576-41559_44.jpg);*/
   background-image: url("./resources/background_2.jpg");
   background-size: 100%;
   background-attachment: fixed;
