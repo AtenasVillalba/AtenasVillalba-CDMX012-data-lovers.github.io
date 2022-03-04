@@ -23,8 +23,6 @@ export function orderByAz() {
     b = b.name;
     return a.localeCompare(b);
   });
-
-  console.log(finalOrderAZ);
   return finalOrderAZ;
 }
 //*******************FUNCION DE ORDENAMIENTO Z-A */
@@ -35,28 +33,27 @@ export function orderByZa() {
     b = b.name;
     return a.localeCompare(b);
   });
-  console.log(finalOrderZA);
   return finalOrderZA.reverse();
 }
 //*******************FUNCION DE FILTRADO POR TIPOS */
 export function filterByTypes(type) {
-  const pokemones = findAllPokemons();
-  const filtrado = pokemones.filter((pokemon) => pokemon.type.includes(type));
-  return filtrado;
+  const allPokemons = findAllPokemons();
+  const filterResult = allPokemons.filter((pokemon) => pokemon.type.includes(type));
+  return filterResult;
 }
 //*******************FUNCION DE POKEMONES LEGENDARIOS */
 export function filterByLegendary(legendary) {
-  const pokemones = findAllPokemons();
+  const allPokemons = findAllPokemons();
   legendary = "legendary";
-  const legendarios = pokemones.filter((pokemon) =>
+  const legendaries = allPokemons.filter((pokemon) =>
     pokemon["pokemon-rarity"].includes(legendary)
   );
-  return legendarios;
+  return legendaries;
 }
 //*******************FUNCION DE BUSQUEDA POR NOMBRE */
 export function searchPokemon(word) {
-  const pokemones = findAllPokemons();
-  let finalSearch = pokemones.filter((item) => item.name.includes(word));
+  const allPokemons = findAllPokemons();
+  let finalSearch = allPokemons.filter((item) => item.name.includes(word));
   return finalSearch;
 }
 

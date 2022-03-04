@@ -23,7 +23,7 @@ nav {
   margin-bottom: 0%;
 }
 
-.Logo {
+.logo {
   display: inline-block;
   width: 15%;
   position: absolute;
@@ -35,7 +35,7 @@ nav {
   left: 0;
 }
 
-.Lente {
+.lente {
   display: inline-block;
   position: absolute;
   padding: 0;
@@ -78,14 +78,14 @@ input {
   text-transform: lowercase;
 }
 
-.ButtonRed {
+.button-red {
   background-color: red;
   color: red;
   margin-right: 3%;
   font-size: 1.5vw;
 }
 
-.ButtonYellow {
+.button-yellow {
   background-color: rgb(238, 203, 5);
   color: rgb(238, 203, 5);
   margin-right: 3%;
@@ -93,18 +93,18 @@ input {
   font-size: 1.5vw;
 }
 
-#Us {
+#us {
   background-color: green;
   color: black;
   font-size: 1.5vw;
 }
 
-.welcomePage {
+.welcome-page {
   background-image: url("./resources/background_2.jpg");
   background-size: 100%;
   background-attachment: fixed;
 }
-.welcomeBox {
+.welcome-box {
   display: flex;
   background-color: rgba(70, 123, 157, 0.7);
   margin: 5% 20%;
@@ -120,13 +120,13 @@ h1 {
   font-size: 2.5vw;
 }
 
-.imgPokeBola {
+.img-pokebola {
   display: flex;
   margin: 1% auto;
   align-items: center;
   justify-content: center;
 }
-.imgPokeBola:hover {
+.img-pokebola:hover {
   transform: rotateY(360deg);
   transition: transform 0.8s;
 }
@@ -139,7 +139,7 @@ h1 {
   width: 100%;
 }
 
-#orderBy {
+#order-by {
   margin-right: 4%;
   margin-left: 8%;
   padding: 1%;
@@ -149,7 +149,7 @@ h1 {
   width: 20%;
   font-size: x-large;
 }
-#clasifyLegendary {
+#clasify-legendary {
   padding: 1%;
   border-radius: 10%;
   background-color: #f1faee;
@@ -169,7 +169,7 @@ h1 {
   height: auto;
   font-size: x-large;
 }
-#statsSpace {
+#stats-space {
   display: flex;
   background-color: rgba(70, 123, 157, 0.9);
   margin: 5% 10%;
@@ -180,10 +180,10 @@ h1 {
   padding: 2%;
   text-align: center;
 }
-#statsSpace p {
+#stats-space p {
   font-size: large;
 }
-#showData {
+#show-data {
   display: flex;
   background-color: rgba(70, 123, 157, 0.7);
   margin: 5% 10%;
@@ -194,7 +194,7 @@ h1 {
   justify-content: space-between;
 }
 
-.pokeCards {
+.poke-cards {
   background-color: #f1faee;
   text-align: center;
   display: block;
@@ -204,15 +204,15 @@ h1 {
   padding-bottom: 10%;
 }
 
-.classTypeNumber {
+.class-type-number {
   padding-top: 10%;
   font-weight: 900;
 }
-.pokeCards img {
+.poke-cards img {
   width: 90%;
 }
 
-#showData a {
+#show-data a {
   text-decoration: none;
   width: 16%;
   margin: 1%;
@@ -222,7 +222,7 @@ h1 {
   text-transform: capitalize;
 }
 
-.contentAboutPokemon {
+.content-about-pokemon {
   text-transform: capitalize;
 }
 
@@ -244,7 +244,7 @@ h1 {
   pointer-events: auto;
 }
 
-.modalDialog {
+.modal-dialog {
   margin: auto;
   margin-top: 15%;
   position: relative;
@@ -258,11 +258,11 @@ h1 {
   transition: all 500ms ease-in;
 }
 
-.modalDialog a {
+.modal-dialog a {
   margin: 2%;
   background-color: #457b9d;
 }
-.closeModal {
+.close-modal {
   background: #606061;
   color: #ffffff;
   line-height: 25px;
@@ -276,7 +276,7 @@ h1 {
   border-radius: 3px;
 }
 
-.closeModal:hover {
+.close-modal:hover {
   background: #f1b418;
   color: #457b9d;
 }
@@ -289,8 +289,8 @@ footer {
   bottom: 0;
   width: 100%;
 }
-#gitHub1,
-#gitHub2 {
+#git-hub1,
+#git-hub2 {
   height: 1em;
 }
 p {
@@ -298,15 +298,15 @@ p {
 }
 
 @media all and (max-width: 720px) {
-  .Logo {
+  .logo {
     width: 20%;
   }
-  .Lente,
-  .ButtonRed,
-  .ButtonYellow {
+  .lente,
+  .button-red,
+  .button-yellow {
     display: none;
   }
-  #Us {
+  #us {
     font-size: x-small;
   }
   input,
@@ -314,7 +314,7 @@ p {
     margin: auto;
     font-size: x-small;
   }
-  .welcomeBox {
+  .welcome-box {
     display: flex;
     background-color: rgba(70, 123, 157, 0.7);
     margin: 7% 10% 5%;
@@ -329,14 +329,14 @@ p {
   .menu {
     flex-direction: column;
   }
-  #clasifyLegendary,
+  #clasify-legendary,
   #type,
-  #orderBy {
+  #order-by {
     width: 40%;
     justify-content: center;
     margin: 2%;
   }
-  #showData a {
+  #show-data a {
     text-decoration: none;
     width: 28%;
     margin: 1%;
@@ -346,18 +346,18 @@ p {
     text-transform: capitalize;
     justify-content: center;
   }
-  #showData a p {
+  #show-data a p {
     font-size: xx-small;
   }
-  .pokeCards {
+  .poke-cards {
     width: fit-content;
   }
-  #showData {
+  #show-data {
     border-radius: 10px;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .modalDialog {
+  .modal-dialog {
     margin: auto;
     margin-top: 10%;
     margin-bottom: 10%;
@@ -373,7 +373,7 @@ p {
     transition: all 500ms ease-in;
     flex-wrap: wrap;
   }
-  .contentAboutPokemon {
+  .content-about-pokemon {
     text-transform: capitalize;
     font-size: small;
     width: fit-content;

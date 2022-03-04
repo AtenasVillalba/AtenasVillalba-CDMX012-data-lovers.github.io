@@ -1,11 +1,11 @@
 /************AQUI SACAMOS IMAGENES ************************/
 //showPokemons(data.pokemon);
 
-function showPokemons(pokemons) {
-  document.getElementById("statsSpace").style.display = "none";
+function showPokemons(pokemons) {   //ESTE ES UN PARAMETRO 
+  document.getElementById("stats-space").style.display = "none";
   //esta funcion almacena la vista de todos los pokemons
 
-  const rootElement = document.getElementById("showData"); //esta variable ayuda a que la vista de los pokemons cambie de acuerdo a los datos que se desean ver
+  const rootElement = document.getElementById("show-data"); //esta variable ayuda a que la vista de los pokemons cambie de acuerdo a los datos que se desean ver
   removeChildNodes(rootElement); //ejecuta la funcion para eliminar sus hijos
 
   //esta variable va a almacenar la informacion de todos los pokemons
@@ -13,17 +13,17 @@ function showPokemons(pokemons) {
   for (let property of pokemons) {
     //bucle for accede a la data
 
-    let identificador = "pokeCards"; //nombre de la clase
+    let identifier = "poke-cards"; //nombre de la clase
     let idDirection = "#" + `${property.name}`;
-    let idSeccion = property.num;
-    let modalDataOpen = "idModal"; //**********tal vez pueda ir en la seccion o en el num, ya que num es el id de cada iteracion
+    let idSection = property.num;
+    let modalDataOpen = "id-modal"; //**********tal vez pueda ir en la seccion o en el num, ya que num es el id de cada iteracion
 
     const modalWindow = document.createElement("a");
     modalWindow.setAttribute("href", idDirection);
 
     const cardSpace = document.createElement("section"); //crea una sección
-    cardSpace.setAttribute("class", identificador); //crea el atributo clase identificador='pokeCards'
-    cardSpace.setAttribute("id", idSeccion);
+    cardSpace.setAttribute("class", identifier); //crea el atributo clase identificador='pokeCards'
+    cardSpace.setAttribute("id", idSection);
 
     const cardName = document.createElement("p"); //crea el elemento parrafo
     cardName.innerHTML = `${
@@ -32,14 +32,14 @@ function showPokemons(pokemons) {
 
     const cardNum = document.createElement("p"); //crea el elemento parrafo
     cardNum.innerHTML = property.num;
-    cardNum.setAttribute("class", "classTypeNumber"); // cambia el texto vacio del parrafo por la propiedad numero
+    cardNum.setAttribute("class", "class-type-number"); // cambia el texto vacio del parrafo por la propiedad numero
 
     const cardType = document.createElement("p");
     const bottonTypePokemon = document.createTextNode(
       "Type: " + `${property.type.join(", ")}`
     );
     cardType.appendChild(bottonTypePokemon);
-    cardType.setAttribute("class", "typeClass");
+    cardType.setAttribute("class", "type-class");
 
     const pokemonImag = document.createElement("img"); //crea un Elemento de tipó imagen
     pokemonImag.setAttribute("src", `${property.img}`); //le asigna el atributo de src con su propiedad que es el link
@@ -51,7 +51,7 @@ function showPokemons(pokemons) {
     cardSpace.appendChild(cardType);
     modalWindow.appendChild(cardSpace);
 
-    document.getElementById("showData").appendChild(modalWindow); //show data es el nodo padre y cardSpace el nodo hijo.
+    document.getElementById("show-data").appendChild(modalWindow); //show data es el nodo padre y cardSpace el nodo hijo.
 
     /***********mostrando ventana modal */
 
@@ -72,26 +72,26 @@ function showPokemons(pokemons) {
     showModal.setAttribute("class", "modal");
 
     const allContent = document.createElement("article");
-    allContent.setAttribute("id", "idModal");
-    allContent.setAttribute("class", "modalDialog");
+    allContent.setAttribute("id", "id-modal");
+    allContent.setAttribute("class", "modal-dialog");
 
     const buttonModal = document.createElement("a");
     const textButton = document.createTextNode("X");
     buttonModal.appendChild(textButton);
     buttonModal.setAttribute("href", "#");
-    buttonModal.setAttribute("class", "closeModal");
-    buttonModal.setAttribute("id", "buttonModal");
+    buttonModal.setAttribute("class", "close-modal");
+    buttonModal.setAttribute("id", "button-modal");
 
     const contentTitle = document.createElement("h2");
     contentTitle.innerHTML = property.name.toUpperCase();
-    contentTitle.setAttribute("class", "modalTitle");
+    contentTitle.setAttribute("class", "modal-title");
 
     const contentImag = document.createElement("img"); //crea un Elemento de tipo imagen
     contentImag.setAttribute("src", `${property.img}`); //le asigna el atributo de src con su propiedad que es el link
     //pokemonImag.setAttribute("data-open", modalDataOpen);
 
     const contentAbout = document.createElement("p");
-    contentAbout.setAttribute("class", "contentAboutPokemon");
+    contentAbout.setAttribute("class", "content-about-pokemon");
     contentAbout.innerHTML =
       " <strong>Info: <br> </strong>" +
       " <strong> Description <br></strong>" +
@@ -131,7 +131,7 @@ function showPokemons(pokemons) {
     allContent.appendChild(contentAbout);
     //allContent.appendChild(contentEvolution)
     showModal.appendChild(allContent);
-    document.getElementById("showData").appendChild(showModal);
+    document.getElementById("show-data").appendChild(showModal);
   }
 }
 
