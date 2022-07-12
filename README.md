@@ -1,299 +1,50 @@
 # Data Lovers
 
+<p align="center"><img src="https://img.wattpad.com/df3f9758d073059277c51ce61fd4816b513a592f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f75485830396e7a657565554c6d513d3d2d3830353831363938322e313564373934633033373066323061383239343030363138393736392e676966" width= 300px/> </p>
+
 ## Índice
 
-- [1. Preámbulo](#1-preámbulo)
-- [2. Resumen del proyecto](#2-resumen-del-proyecto)
-- [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-- [4. Consideraciones generales](#4-consideraciones-generales)
-- [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-- [6. Hacker edition](#6-hacker-edition)
-- [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-- [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-
+* [1. Resumen del proyecto](#1-resumen-del-proyecto)
+* [2. Tecnologías](#2-tecnologías)
+* [3. Prototipos ](#3-prototipos)
+* [4. Historias de usuario ](#4-historias-de-usuario)
+* [5. Test de usabilidad ](#5-test-de-usabilidad)
+* [6. Vista de la intefaz.](#6-vista-de-la-interfaz)
+* [7. Deploy.](#7-deploy)
+* [8. Pruebas unitarias.](#8-pruebas-unitarias)
+* [9.Creadoras.](8-creadoras)
 ---
 
-## 1. Preámbulo
+## 1. Resumen del proyecto
+Data lovers es una aplicación diseñada para la manipulacion de Base de datos con temática de Pokémon, en la cual es posible  filtrar, clasificar y ordenar los Pokémons de acuerdo a las opciones establecidas.
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+## 2. Tecnologías
+<p align="left"><a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/></a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a><a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a><a href="https://jestjs.io" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/jestjsio/jestjsio-icon.svg" alt="jest" width="40" height="40"/> </a> <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> </a> </p>
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+## 3. Prototipos
+Los prototipos fueron creados por medio de Figma.
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
+### 3.1 Alta fidelidad.
+Esta es la version de alta fidelidad que creamos:
+<img width="708" alt="alta fidelidad" src="https://user-images.githubusercontent.com/97538997/178374078-6ac46495-e217-442c-b6e1-d722cda719c8.png">
+<img width="287" alt="alta fidelidad 2" src="https://user-images.githubusercontent.com/97538997/178374084-4d1e2496-10c1-4499-9b48-603345f35044.png">
 
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
+### 3.2 Baja fidelidad.
+Esta es la version de baja fidelidad que creamos:
 
-## 2. Resumen del proyecto
+<img width="627" alt="destock" src="https://user-images.githubusercontent.com/97538997/178373739-3759af20-77ab-4fe4-8a5c-a20330255079.png">
+<img width="305" alt="mobile first" src="https://user-images.githubusercontent.com/97538997/178373746-2f123b72-7a06-4832-8ecd-83a67708df6d.png">
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
 
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
+## 4. Historias de usuario
 
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
-
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
-
-Estos son datos que te proponemos:
-
-- [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
-
-- [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
-
-- [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty.
-
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
-
-- [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](src/data/athletes/README.md)
-
-- [Studio Ghibli](src/data/ghibli/ghibli.json).
-  En este set encontrarás una lista de las animaciones y sus personajes del
-  [Studio Ghibli](https://ghiblicollection.com/).
-  - [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
-
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
-
-## 3. Objetivos de aprendizaje
-
-Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en tu proyecto. Piensa en eso al decidir tu estrategia de trabajo.
-
-### HTML
-
-- [x] **Uso de HTML semántico**
-
-    <details><summary>Links</summary><p>
-
-  - [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  - [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-  </p></details>
-
-### CSS
-
-- [x] **Uso de selectores de CSS**
-
-    <details><summary>Links</summary><p>
-
-  - [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
-  - [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-  </p></details>
-
-- [x] **Modelo de caja (box model): borde, margen, padding**
-
-    <details><summary>Links</summary><p>
-
-  - [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
-  - [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  - [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  - [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  - [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-  </p></details>
-
-- [x] **Uso de flexbox en CSS**
-
-    <details><summary>Links</summary><p>
-
-  - [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  - [Flexbox Froggy](https://flexboxfroggy.com/#es)
-  - [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-  </p></details>
-
-### Web APIs
-
-- [x] **Uso de selectores del DOM**
-
-    <details><summary>Links</summary><p>
-
-  - [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/02-dom/03-1-dom-methods-selection)
-  - [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  - [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-  </p></details>
-
-- [x] **Manejo de eventos del DOM (listeners, propagación, delegación)**
-
-    <details><summary>Links</summary><p>
-
-  - [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
-  - [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
-  - [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
-  - [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
-  </p></details>
-
-- [x] **Manipulación dinámica del DOM**
-
-    <details><summary>Links</summary><p>
-
-  - [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  - [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
-  - [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
-  - [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
-  - [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
-  - [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
-  </p></details>
-
-### JavaScript
-
-- [x] **Diferenciar entre tipos de datos primitivos y no primitivos**
-
-- [x] **Arrays (arreglos)**
-
-    <details><summary>Links</summary><p>
-
-  - [Arreglos](https://curriculum.laboratoria.la/es/topics/javascript/04-arrays)
-  - [Array - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/)
-  - [Array.prototype.sort() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  - [Array.prototype.forEach() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  - [Array.prototype.map() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  - [Array.prototype.filter() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  - [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-  </p></details>
-
-- [x] **Objetos (key, value)**
-
-    <details><summary>Links</summary><p>
-
-  - [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects)
-  </p></details>
-
-- [x] **Variables (declaración, asignación, ámbito)**
-
-    <details><summary>Links</summary><p>
-
-  - [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/01-values-variables-and-types)
-  - [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
-  </p></details>
-
-- [x] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
-
-    <details><summary>Links</summary><p>
-
-  - [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  - [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-  </p></details>
-
-- [x] **Uso de bucles/ciclos (while, for, for..of)**
-
-    <details><summary>Links</summary><p>
-
-  - [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/02-loops)
-  - [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
-  </p></details>
-
-- [x] **Funciones (params, args, return)**
-
-    <details><summary>Links</summary><p>
-
-  - [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
-  - [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
-  - [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
-  - [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
-  </p></details>
-
-- [-] **Pruebas unitarias (unit tests)**
-
-    <details><summary>Links</summary><p>
-
-  - [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-  </p></details>
-
-- [x] **Módulos de ECMAScript (ES Modules)**
-
-    <details><summary>Links</summary><p>
-
-  - [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  - [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-  </p></details>
-
-- [x] **Uso de linter (ESLINT)**
-
-- [x] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
-
-- [-] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
-
-### Control de Versiones (Git y GitHub)
-
-- [x] **Git: Instalación y configuración**
-
-- [x] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
-
-- [-] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
-
-- [ ] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
-
-- [ ] **GitHub: Despliegue con GitHub Pages**
-
-    <details><summary>Links</summary><p>
-
-  - [Sitio oficial de GitHub Pages](https://pages.github.com/)
-  </p></details>
-
-- [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
-
-### user-centricity
-
-- [x] **Diseñar un producto o servicio poniendo a la usuaria en el centro**
-
-### product-design
-
-- [x] **Crear prototipos de alta fidelidad que incluyan interacciones**
-
-- [x] **Seguir los principios básicos de diseño visual**
-
-### research
-
-- [x] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
-
-## Criterios de aceptación mínimos del proyecto :)
-Si deseas visualizar el producto final, lo puedes hacer accediendo a cualquiera de los siguientes links:
-* https://atenasvillalba.github.io/CDMX012-data-lovers-Pokemon/
-
-* https://monzerratbanuelos.github.io/CDMX012-data-lovers-Pokemon/
-
-
-### Definición del producto
-
-Nuestro proceso de diseño =>
-Se basó directamente en las necesidades e inquietudes del usuario sobre la información y
+Nuestro proceso de diseño se basó directamente en las necesidades e inquietudes del usuario sobre la información y
 datos que queria visualizar en nuestra interfaz, para poder recabar la información se realizó una investigación mediante un formulario, el cual puedes visualizar en el siguiente link:
 (https://forms.gle/LZEnSEK8vwdLAENo7).
 
-### Historias de usuario
 
-HISTORIA DE USUARIO 1(POKÉDEX):
+### 4.1 HISTORIA DE USUARIO 1(POKÉDEX):
 Yo como:Usuario
 
 Quiero:Visualizar a los pokemones de acuerdo a los datos de la pokédex
@@ -311,11 +62,11 @@ DEFINICIÓN DE TERMINADO:
 -El código ha pasado el code-review
 -El código ha sido subido al repositorio
 
-HISTORIA DE USUARIO 2(CLASIFICACIÓN:TIPO):
+### 4.2 HISTORIA DE USUARIO 2(CLASIFICACIÓN:TIPO):
 Yo como:Usuario
 
 Quiero:Visualizar a los Pokémon según su tipo
-
+ 
 Para:conocer a qué tipo pertenece cada uno
 
 CRITERIOS DE ACEPTACIÓN:
@@ -330,7 +81,7 @@ DEFINICIÓN DE TERMINADO:
 -El código ha pasado el code-review
 -El código ha sido subido al repositorio
 
-HISTORIA DE USUARIO 3(CLASIFICACIÓN:Buscador):
+### 4.3 HISTORIA DE USUARIO 3(CLASIFICACIÓN:Buscador):
 Yo como:Usuario
 
 Quiero:Acceder únicamente a la información de un Pokémon a través de su nombre
@@ -348,7 +99,7 @@ DEFINICIÓN DE TERMINADO:
 -El código ha pasado el code-review
 -El código ha sido subido al repositorio
 
-HISTORIA DE USUARIO 4(CLASIFICACIÓN:Legendarios):
+### 4.4 HISTORIA DE USUARIO 4(CLASIFICACIÓN:Legendarios):
 Yo como:Usuario
 
 Quiero:Visualizar a los Pokémon según su rareza
@@ -365,7 +116,7 @@ DEFINICIÓN DE TERMINADO:
 -El código ha pasado el code-review
 -El código ha sido subido al repositorio
 
-HISTORIA DE USUARIO 5(CLASIFICACIÓN:Estadística) :
+### 4.5 HISTORIA DE USUARIO 5(CLASIFICACIÓN:Estadística) :
 Yo como:Usuario
 
 Quiero:Visualizar las estadísticas(promedio) de un tipo de Pokémon
@@ -382,28 +133,10 @@ DEFINICIÓN DE TERMINADO:
 -El código ha pasado el code-review
 -El código ha sido subido al repositorio
 
-### Diseño de la Interfaz de Usuario
 
-#### Prototipo de baja fidelidad
-Esta es la version de baja fidelidad que creamos para la versión de escritorio:
+## 5. Test de usabilidad
 
-![PrototipoBajaFidelidad1](https://user-images.githubusercontent.com/97538997/156029953-053883f0-c78b-40cf-860c-8da9769a332b.jpg)
-![PrototipoBajaFidelidad2](https://user-images.githubusercontent.com/97538997/156029970-1638595e-506e-425f-b213-b1210e0324e4.jpg)
-
-Esta es la version de baja fidelidad que creamos para la versión de celular:
-![PrototipoBajaFidelidad3](https://user-images.githubusercontent.com/97538997/156029978-d670b66f-7fe2-4d2c-a476-8a11b40f038e.jpg)
-
-#### Prototipo de alta fidelidad
-
-Nuestro prototipo de alta fidelidad para computadora podrá ser visualizado en el siguiente link:
-(https://www.figma.com/proto/jpLJspNMvQj1zWbVYwiM6i/POKEMON-DATA-LOVERS?node-id=64%3A2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=64%3A2&show-proto-sidebar=1)
-
-Nuestro prototipo de alta fidelidad para telefonos moviles podrá ser visualizado en el siguiente link:
-(https://www.figma.com/proto/jpLJspNMvQj1zWbVYwiM6i/POKEMON-DATA-LOVERS?node-id=128%3A123&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=128%3A123&show-proto-sidebar=1)
-
-#### Testeos de usabilidad
-
-PROBLEMAS ENCONTRADOS EN BASE A LOS USUARIOS:
+### 5.1 PROBLEMAS ENCONTRADOS EN BASE A LOS USUARIOS:
 -Los colores:
 A traves de un feedback de usuario nos dimos cuenta que la gama de colores utilizada no era amigable para el usuario, por lo que planteamos una nueva gama para mejorar la experiencia del usuario utilizando tonos mas amigables
 -La letra: 
@@ -414,7 +147,7 @@ El usuario comentó un desagrado con la repetición de la imagen de fondo, motiv
 En un test de usabilidad nos dimos cuenta que para ciertos tamaños de dispositivos moviles la pagína no era responsiva, por lo cual establecimos un ancho predeterminado del @medi que posterior a ello, visualizamos nuestro interfaz desde diferentes dispositivos moviles así definiendo un ancho estandár que tuviera mayor adaptabilidad
 
 
-PROBLEMAS ENCONTRADOS EN CÓDIGO:
+### 5.2 PROBLEMAS ENCONTRADOS EN CÓDIGO:
 
 -En nuestra función de ordenado de A-Z y Z-A, no era posible el testeo completo de lineas del codigo, lo cual hacía que nuestra branch disminuyera un 50%, causando inestabilidad en el código, entonces, la solución para el problema de testeo fue reescribir la estructura modificando la parte no testeable por algo que si lo fuera y nos permitiera saber el funcionamiento optimo para el proyecto 
 
@@ -422,7 +155,7 @@ PROBLEMAS ENCONTRADOS EN CÓDIGO:
 
 -Para mejorar el funcionamiento de respuesta a cada funcion redujimos dentro de una variable un objeto con unicamente 3 datos a testear para compararlo en los test en lugar de acceder a toda la data, esto gracias a los Mocks y a la creación de nuevos files.
 
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
+### 5.3 Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
 1. Nuestro proyecto muestra la data en una interfaz amigable y de facil manejo
 2. Nuestro proyecto permite al usuario interactuar para obtener la infomación que necesita.
@@ -430,9 +163,33 @@ PROBLEMAS ENCONTRADOS EN CÓDIGO:
    tipos de pantallas: móviles, tablets y desktops.
 4. Nuestro proyecto sigue los fundamentos de visual design.
 
-### Pruebas unitarias
+
+## 6. Vista de la interfaz
+
+<img width="2261" alt="Interfaz data lovers" src="https://user-images.githubusercontent.com/97538997/178376064-5da9fe26-cc86-4f19-b599-bfd0e0acb6ff.png">
+<img width="1069" alt="interfaz data lover 3" src="https://user-images.githubusercontent.com/97538997/178376076-49db75e0-3ddf-43f2-9ccb-098b8dbdb2f6.png">
+<img width="2235" alt="Interfaz data lovers 2" src="https://user-images.githubusercontent.com/97538997/178376091-664a3488-1816-4d79-a1ce-7971911f663e.png">
+<img width="1066" alt="interfaz data lover 4" src="https://user-images.githubusercontent.com/97538997/178376079-f8dcc843-820e-4756-ab19-de7db9cc3e4a.png">
+
+
+## 7. Deploy
+Si deseas visualizar el producto final, lo puedes hacer escogiendo  y dando click a cualquiera de los siguientes Pokémon:
+
+ <p align="center">
+<a href="https://atenasvillalba.github.io/CDMX012-data-lovers-Pokemon/"><img align="center" src="https://images.wikidexcdn.net/mwuploads/wikidex/thumb/2/24/latest/20211006053413/Charmander_%28dream_world%29_2.png/180px-Charmander_%28dream_world%29_2.png" alt="https://atenasvillalba.github.io/CDMX012-data-lovers-Pokemon/" width=200px  /></a> <a href="https://monzerratbanuelos.github.io/CDMX012-data-lovers-Pokemon/"><img align="center" src="https://i.pinimg.com/originals/3d/76/31/3d763132c30ac83eb777293699bf60a7.png" alt="https://monzerratbanuelos.github.io/CDMX012-data-lovers-Pokemon/" width=200px  /></a>
+</p>
+
+
+### 8. Pruebas unitarias
 
 Se escribieron pruebas unitarias que cumplen con el porcentaje solicitado por el proyecto:
 ![image](https://user-images.githubusercontent.com/97547777/156222405-108f3780-e457-4750-866d-ba40738bde33.png)
 
 ![image](https://user-images.githubusercontent.com/97547777/156222482-30d6cb57-6fab-4cb9-868a-94c44cb0466d.png)
+
+## 9. Authors
+
+| Developers | Contact |
+| ------------- | ------------- |
+| Atenas Villalba| [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/atenas-villalba-764bb8235/) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AtenasVillalba) |
+| Monzerrat Bañuelos | [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adriana-monzerrat-banuelos-godoy/) [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MonzerratBanuelos) |
